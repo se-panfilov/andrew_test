@@ -1,0 +1,46 @@
+{
+  "name": "andrew_test",
+  "version": "0.0.0",
+  "description": "test project",
+  "author": "Sergey Panfilov <se-panfilov@ya.ru>",
+  "private": false,
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.12.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "google-closure-compiler": "^20161201.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-strip-code": "^0.1.4",
+    "gulp-todo": "^5.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-umd": "^0.2.0",
+    "gulp-watch": "^4.3.11",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "to-case": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
