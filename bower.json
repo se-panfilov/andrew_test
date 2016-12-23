@@ -1,0 +1,20 @@
+{
+  "name": "andrew_test",
+  "description": "test project",
+  "main": "index.js",
+  "authors": [
+    "Sergey Panfilov <se-panfilov@ya.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/se-panfilov/andrew_test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='keywords', content='andrew_test')
+    meta(http-equiv='Cache-Control', content='no-cache')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    //App name
+    meta(name='application-name', content='andrew_test')
+
+    //Fonts //It's already loaded by bootswatch paper
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,500,700', rel='stylesheet', type='text/css', media='all')
+
+    //CSS
+    link(href='./test_2.css', rel='stylesheet')
+
+    title andrew_test
+  body
+    input#url_input(placeholder="URL" value="http://google.com")
+    button(type="button" onclick="getUrl()") get html
+
+  script(src="./test_2.js")
+  script(src="bower_components/jquery/dist/jquery.js")
