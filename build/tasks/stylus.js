@@ -1,26 +1,28 @@
-"use strict";
+"use strict"
 
 const gulp = require('gulp')
 
-gulp.task('jade', () => {
+gulp.task('stylus', function () {
   const config = require('../config')
-  const jade = require('gulp-pug')
+  const stylus = require('gulp-stylus')
+  const nib = require('nib')
   const changed = require('gulp-changed')
+  const concat = require('gulp-concat')
   const notify = require('gulp-notify')
   const plumber = require('gulp-plumber')
-  const rename = require('gulp-rename')
 
-  return gulp.src(config.jade.src)
+  return gulp.src(config.stylus.src)
     .pipe(plumber({
       errorHandler: notify.onError(err => {
         return {
-          title: 'Jade',
+          title: 'Styles',
           message: err.message
         }
       })
     }))
     .pipe(changed(config.dest))
-    .pipe(jade({ pretty: true }))
-    // .pipe(gulp.dest(config.dest + '/' + config.projectName))
+    // .pipe(concat(config.projectName + '.styl'))
+    .pipe(stylus({ use: [nib()], compress: false }))
+    // .pipe(gulp.dest(config.dest + config.projectName))
     .pipe(gulp.dest(config.dest))
 })

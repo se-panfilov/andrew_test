@@ -3,7 +3,7 @@
 const gulp = require('gulp')
 
 const config = require('../config')
-const sourcemaps = require('gulp-sourcemaps')
+// const sourcemaps = require('gulp-sourcemaps')
 const uglify = require('gulp-uglify')
 const concat = require('gulp-concat')
 const rename = require('gulp-rename')
@@ -25,32 +25,25 @@ gulp.task('es5', () => {
         }
       })
     }))
-    .pipe(concat(`${config.projectName}.es5.js`))
+    // .pipe(concat(`${config.projectName}.es5.js`))
     .pipe(stripCode({
       start_comment: 'START.TESTS_ONLY',
       end_comment: 'END.TESTS_ONLY'
     }))
     .pipe(babel())
-    .pipe(umd({
-      exports: function (file) {
-        return to.pascal(config.projectName)
-      },
-      namespace: function (file) {
-        return to.pascal(config.projectName)
-      }
-    }))
-    .pipe(gulp.dest(config.dest))
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    // .pipe(closureCompiler({
-    //   compilation_level: 'ADVANCED',
-    //   // warning_level: 'VERBOSE',
-    //   language_in: 'ECMASCRIPT5_STRICT',
-    //   language_out: 'ECMASCRIPT5_STRICT',
-    //   // js_output_file: 'output.min.js'
+    // .pipe(umd({
+    //   exports: function (file) {
+    //     return to.pascal(config.projectName)
+    //   },
+    //   namespace: function (file) {
+    //     return to.pascal(config.projectName)
+    //   }
     // }))
-    .pipe(uglify())
-    .pipe(rename({ basename: config.projectName + '.es5.min' }))
     .pipe(gulp.dest(config.dest))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(config.dest))
+    // .pipe(sourcemaps.init({ loadMaps: true }))
+    // .pipe(uglify())
+    // .pipe(rename({ basename: config.projectName + '.es5.min' }))
+    // .pipe(gulp.dest(config.dest))
+    // .pipe(sourcemaps.write('.'))
+    // .pipe(gulp.dest(config.dest))
 })

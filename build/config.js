@@ -19,6 +19,11 @@ const config = {
       SRC + '/**/*.jade'
     ]
   },
+  stylus: {
+    src: [
+      SRC + '/**/*.styl'
+    ]
+  },
   tests: {
     src: [TESTS_SRC]
   }

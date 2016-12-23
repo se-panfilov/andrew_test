@@ -7,7 +7,8 @@ const runSequence = require('run-sequence').use(gulp)
 gulp.task('make', () => {
   return runSequence(
     'es5',
-    'jade'
+    'jade',
+    'stylus'
   )
 })
 
