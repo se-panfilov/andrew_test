@@ -26,7 +26,16 @@ function run (arr, cb) {
 //Example: run(arr, v => v + '!')
 
 
+function getHtml (url, cb) {
+  return $.get(url, null, (data) => {
+    console.info('123123213')
+  })
+}
+
 function getUrl () {
   const url = document.getElementById('url_input').value
-  return $.get('https://crossorigin.me/' + url, null, data => alert("Data Loaded: " + data))
+  getHtml(url, data => {
+    document.getElementById('output').innerHTML = data
+  })
+
 }
