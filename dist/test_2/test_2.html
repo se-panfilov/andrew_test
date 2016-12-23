@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="andrew_test">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--App name-->
+    <meta name="application-name" content="andrew_test">
+    <!--Fonts //It's already loaded by bootswatch paper-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet" type="text/css" media="all">
+    <!--CSS-->
+    <link href="./test_2.css" rel="stylesheet">
+    <title>andrew_test</title>
+  </head>
+  <body>
+    <h2>Part 1</h2>
+    <button type="button" onclick="console.log(arr)">show array in console</button>
+    <button type="button" onclick="addStr(arr, 'wow');console.log(arr)">Add 'wow' in array</button>
+    <button type="button" onclick="deleteStr(arr, 'else');console.log(arr)">Delete 'else'</button>
+    <button type="button" onclick="arr = run(arr, v =&gt; v + '!');console.log(arr)">Add '!' at the end of each item</button>
+    <h2>Part 2</h2>
+    <input id="url_input" placeholder="URL" value="https://crossorigin.me/https://google.com">
+    <button type="button" onclick="getUrl()">get html</button>
+    <div id="output"></div>
+  </body>
+  <script src="./test_2.js"></script>
+  <script src="../../bower_components/jquery/dist/jquery.js"></script>
+</html>
