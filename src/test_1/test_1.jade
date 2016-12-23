@@ -19,12 +19,12 @@ html
     title andrew_test
   body
     .fixed
-      | I'm fixed
+      span.text I'm fixed
     .absolute
-      | I'm absolute
+      span.text I'm absolute
       button(type="button" onclick="togglePopup()") Open popup
-    .popup
-      span I'm popup
+    .popup.-hidden
+      span.text I'm popup
       button(type="button" onclick="changeText()") Change text inside "absolute"
 
   script(src="./test_1.js")
