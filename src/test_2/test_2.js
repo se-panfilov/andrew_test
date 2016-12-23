@@ -1,4 +1,4 @@
-const arr = [
+var arr = [
   'some',
   'another',
   'other',
@@ -7,7 +7,7 @@ const arr = [
 ]
 
 function addStr (arr, str) {
-  if (arr.indexOf(str) === -1) throw 'Shit happens'
+  if (arr.indexOf(str) > -1) throw 'Shit happens'
   arr.push(str)
 
   return arr
@@ -21,15 +21,14 @@ function deleteStr (arr, str) {
 }
 
 function run (arr, cb) {
-  return arr.map(cb)
+  const result = arr.map(cb)
+  return result
 }
 //Example: run(arr, v => v + '!')
 
 
 function getHtml (url, cb) {
-  return $.get(url, null, (data) => {
-    console.info('123123213')
-  })
+  return $.get(url, null, cb)
 }
 
 function getUrl () {

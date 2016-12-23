@@ -18,6 +18,13 @@ html
 
     title andrew_test
   body
+    h2 Part 1
+    button(type="button" onclick="console.log(arr)") show array in console
+    button(type="button" onclick="addStr(arr, 'wow');console.log(arr)") Add 'wow' in array
+    button(type="button" onclick="deleteStr(arr, 'else');console.log(arr)") Delete 'else'
+    button(type="button" onclick="arr = run(arr, v => v + '!');console.log(arr)") Add '!' at the end of each item
+
+    h2 Part 2
     input#url_input(placeholder="URL" value="https://crossorigin.me/https://google.com")
     button(type="button" onclick="getUrl()") get html
     #output
